@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <div>jquery ajax</div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    function fetchData() {
+      var result = [];
+
+      $.ajax({
+        url: 'https://api.hnpwa.com/v0/news/1.json',
+        success(data) {
+          console.log('데이터 호출 결과', data);
+          result = data;
+          console.log('함수 결과', result);
+        }
+      });
+      fetchData();
+    }
+  </script>
+</html>
